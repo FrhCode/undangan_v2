@@ -1,13 +1,13 @@
 "use client";
-import {} from "next/navigation";
-import { useForm } from "react-hook-form";
+import { useRouter, usePathname } from "next/navigation";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
-
-import Message from "@/type/messages";
+import { Message } from "@prisma/client";
+import clsx from "clsx";
 
 type FormData = {
   name: string;
-  message: string;
+  content: string;
 };
 
 type Props = {
@@ -15,15 +15,23 @@ type Props = {
 };
 
 export default function Message({ messages }: Props) {
+  const router = useRouter();
+  const path = usePathname();
+
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = useForm<FormData>();
 
-  const onSubmit = handleSubmit(async (data) => {
-    console.log("Root Path:");
-  });
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    const res = await fetch("/api/messages", {
+      body: JSON.stringify(data),
+      method: "POST",
+    }).then((res) => res.json());
+
+    router.refresh();
+  };
 
   return (
     <section
@@ -36,13 +44,19 @@ export default function Message({ messages }: Props) {
         </p>
         <div className=" h-0 w-36 border-t-2 border-solid border-teal-900"></div>
       </div>
-      <form className="w-full space-y-2" onSubmit={onSubmit}>
+      <form className="w-full space-y-2" onSubmit={handleSubmit(onSubmit)}>
         <div className="h-10">
           <input
             type="text"
             placeholder="Masukan nama anda"
-            className="h-full w-full border-b-2 border-teal-700 bg-transparent px-2 text-teal-900 focus:outline-none"
-            {...register("name")}
+            className={clsx(
+              `h-full w-full border-b-2 bg-transparent px-2 text-teal-900 focus:outline-none`,
+              {
+                "border-teal-700": errors.name === undefined,
+                "border-red-700": errors.name,
+              }
+            )}
+            {...register("name", { required: "Kolom wajib diisi" })}
           />
         </div>
 
@@ -50,9 +64,15 @@ export default function Message({ messages }: Props) {
           <textarea
             id=""
             rows={3}
-            className="w-full border-2 border-teal-700  bg-transparent px-2 leading-10 text-teal-900 focus:outline-none"
+            className={clsx(
+              `w-full border-2 bg-transparent px-2 leading-10 text-teal-900 focus:outline-none`,
+              {
+                "border-teal-700": errors.content === undefined,
+                "border-red-700": errors.content,
+              }
+            )}
             placeholder="Masukan pesan anda"
-            {...register("message")}
+            {...register("content", { required: "Kolom wajib diisi" })}
           ></textarea>
         </div>
         <motion.button
