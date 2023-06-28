@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import { Message } from "@prisma/client";
 import clsx from "clsx";
+import RevealOpacity from "./reveal-opacity";
 
 type FormData = {
   name: string;
@@ -41,9 +42,11 @@ export default function Message({ messages }: Props) {
       className="mb-20 flex flex-col items-center justify-center space-y-4 bg-teal-50 p-8"
     >
       <div className="flex flex-col items-center justify-center space-y-2">
-        <p className="font-dancing-script text-3xl font-semibold text-teal-900">
-          Kirimkan Pesan
-        </p>
+        <RevealOpacity>
+          <p className="font-dancing-script text-3xl font-semibold text-teal-900">
+            Kirimkan Pesan
+          </p>
+        </RevealOpacity>
         <div className=" h-0 w-36 border-t-2 border-solid border-teal-900"></div>
       </div>
       <form className="w-full space-y-2" onSubmit={handleSubmit(onSubmit)}>
