@@ -16,7 +16,7 @@ interface StoreState {
 const useStore = create<StoreState>()((set) => ({
   isInvitationOpen: false,
   musicState: false,
-  D_Day: new Date(2023, 6, 5),
+  D_Day: new Date(2023, 6, 5, 9),
   D_DayTime: "09.00 - 12.00 WIT",
   D_DayLocation: "Pinrang Masolo-sulawesi selatan",
   Reception: new Date(2023, 6, 23),
