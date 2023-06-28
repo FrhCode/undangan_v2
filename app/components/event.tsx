@@ -1,9 +1,29 @@
+"use client";
 import React from "react";
 import WeddingSvg from "./wedding-svg";
 import RevealOpacity from "./reveal-opacity";
 import { GiPartyHat } from "react-icons/gi";
+import { format } from "date-fns";
+import { id } from "date-fns/locale";
+import useStore from "@/store/useStore";
 
 export default function Event() {
+  const {
+    D_Day,
+    D_DayLocation,
+    D_DayTime,
+    Reception,
+    ReceptionLocation,
+    ReceptionTime,
+  } = useStore((state) => ({
+    D_Day: state.D_Day,
+    D_DayTime: state.D_DayTime,
+    D_DayLocation: state.D_DayLocation,
+    Reception: state.Reception,
+    ReceptionTime: state.ReceptionTime,
+    ReceptionLocation: state.ReceptionLocation,
+  }));
+
   return (
     <section id="event" className="space-y-5 bg-teal-50 p-5 py-10">
       <div className="flex flex-col items-center justify-center  space-y-2 rounded-lg bg-teal-700 p-8 text-white shadow-md">
@@ -15,7 +35,9 @@ export default function Event() {
             </p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">{"10-07-2022"}</p>
+            <p className="text-center text-sm">
+              {format(D_Day, "EEEE dd-MMMM-yyyy", { locale: id })}
+            </p>
           </RevealOpacity>
         </div>
 
@@ -24,7 +46,7 @@ export default function Event() {
             <p className="font-medium">Pukul</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-sm">07.00 - 09.00 WIB</p>
+            <p className="text-sm">{D_DayTime}</p>
           </RevealOpacity>
         </div>
 
@@ -33,10 +55,7 @@ export default function Event() {
             <p className="font-medium">Lokasi</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">
-              Jl. Yos Sudarso, Karang Balik, Kec. Tarakan Bar., Kota Tarakan,
-              Kalimantan Utara 70114
-            </p>
+            <p className="text-center text-sm">{D_DayLocation}</p>
           </RevealOpacity>
         </div>
       </div>
@@ -49,7 +68,9 @@ export default function Event() {
             </p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">{"10-07-2022"}</p>
+            <p className="text-center text-sm">
+              {format(Reception, "EEEE dd-MMMM-yyyy", { locale: id })}
+            </p>
           </RevealOpacity>
         </div>
 
@@ -58,7 +79,7 @@ export default function Event() {
             <p className="font-medium">Pukul</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-sm">09.00 - 16.00 WIB</p>
+            <p className="text-sm">{ReceptionTime}</p>
           </RevealOpacity>
         </div>
 
@@ -67,10 +88,7 @@ export default function Event() {
             <p className="font-medium">Lokasi</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">
-              Jl. Yos Sudarso, Karang Balik, Kec. Tarakan Bar., Kota Tarakan,
-              Kalimantan Utara 70114
-            </p>
+            <p className="text-center text-sm">{ReceptionLocation}</p>
           </RevealOpacity>
         </div>
       </div>

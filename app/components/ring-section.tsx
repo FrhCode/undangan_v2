@@ -5,6 +5,8 @@ import React from "react";
 import { Variants, motion } from "framer-motion";
 import ringImage from "@/public/pexels-karen-laårk-boshoff-7436111.jpg";
 import useStore from "@/store/useStore";
+import { format } from "date-fns";
+import { id } from "date-fns/locale";
 
 const textVariants: Variants = {
   hide: { opacity: 0, y: 10 },
@@ -13,6 +15,7 @@ const textVariants: Variants = {
 
 export default function RingSection() {
   const isInvitationOpen = useStore((state) => state.isInvitationOpen);
+  const D_Day = useStore((state) => state.D_Day);
 
   return (
     <section
@@ -48,7 +51,9 @@ export default function RingSection() {
           </p>
         </motion.div>
         <motion.div className="mt-3" variants={textVariants}>
-          <p className="text-xl font-semibold">{"10-07-2022"}</p>
+          <p className="text-xl font-semibold">
+            {format(D_Day, "EEEE dd-MMMM-yyyy", { locale: id })}
+          </p>
         </motion.div>
       </motion.div>
     </section>

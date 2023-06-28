@@ -26,13 +26,13 @@ export default function Couple() {
           <Image src={wanita} alt="" fill style={{ objectFit: "cover" }} />
         </div>
         <Reveal>
-          <p className="text-center text-sm">Rosyida S.Ak mo</p>
+          <p className="text-center text-sm">Rosyida S.Ak</p>
         </Reveal>
         <Reveal>
           <p className="text-center text-sm font-bold">Putri dari</p>
         </Reveal>
         <Reveal>
-          <p className="text-center">Bapak H.Salim & Ibu Hj.Rosdiana</p>
+          <p className="text-center">Bapak H.Abdul Razak & Ibu Hj.Daria</p>
         </Reveal>
       </div>
       <div className="mt-4 flex flex-col items-center justify-center space-y-1 rounded-lg bg-teal-700 p-8 text-white shadow-md">
@@ -40,13 +40,13 @@ export default function Couple() {
           <Image src={pria} alt="" fill style={{ objectFit: "cover" }} />
         </div>
         <Reveal>
-          <p className="text-center text-sm">Rizky Irmawan</p>
+          <p className="text-center text-sm">Rizky Irmawan S.Ag</p>
         </Reveal>
         <Reveal>
           <p className="text-center text-sm font-bold">Putra dari</p>
         </Reveal>
         <Reveal>
-          <p className="text-center">Bapak H.Dahlan & Ibu Hj.Ralisa</p>
+          <p className="text-center">Bapak Jumri & Ibu Hj.Rawisa</p>
         </Reveal>
       </div>
     </section>

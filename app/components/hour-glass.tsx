@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import getTimeDifference from "@/utils/get-time-difference";
 import { randomArrayString } from "@/utils/random-string";
 import useRandomArrayString from "@/hooks/useRandomArrayString";
+import useStore from "@/store/useStore";
 
 export default function HourGlass() {
   const [days, setDays] = useState("00");
@@ -19,7 +20,7 @@ export default function HourGlass() {
   const [minutes, setMinutes] = useState("00");
   const [seconds, setSeconds] = useState("00");
 
-  const eventDay = useMemo(() => new Date(2023, 7, 1), []);
+  const eventDay = useStore((state) => state.D_Day);
 
   useEffect(() => {
     const interval = setInterval(() => {
