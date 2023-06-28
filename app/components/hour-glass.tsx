@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 import hourglass from "@/public/pexels-cottonbro-6153883.jpg";
@@ -119,7 +120,7 @@ export default function HourGlass() {
 }
 
 function Number({ mv, number }: { mv: number; number: number }) {
-  let animatedValue = useSpring(mv);
+  let animatedValue = useSpring(mv, { damping: 20 });
   useEffect(() => {
     animatedValue.set(mv);
   }, [animatedValue, mv]);

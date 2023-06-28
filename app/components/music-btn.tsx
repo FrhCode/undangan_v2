@@ -5,13 +5,10 @@ import { AnimatePresence, motion, useTransform } from "framer-motion";
 import useStore from "@/store/useStore";
 import useBoundedScroll from "@/hooks/useBoundedScroll";
 
-type Props = {
-  setMusicState: React.Dispatch<React.SetStateAction<boolean>>;
-  musicState: boolean;
-};
-
-export default function MusicBtn({ musicState, setMusicState }: Props) {
+export default function MusicBtn() {
   const isInvitationOpen = useStore((store) => store.isInvitationOpen);
+  const musicState = useStore((store) => store.musicState);
+  const setMusicState = useStore((store) => store.setMusicState);
   const { scrollYBoundedProgress } = useBoundedScroll(500);
   const scrollYBoundedProgressTrottle = useTransform(
     scrollYBoundedProgress,

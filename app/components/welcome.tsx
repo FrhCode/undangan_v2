@@ -8,10 +8,6 @@ import { BsEnvelopeExclamation } from "react-icons/bs";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import useStore from "@/store/useStore";
 
-type Props = {
-  setMusicState: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
 const variants: Variants = {
   initial: {},
   animate: { transition: { staggerChildren: 0.1 } },
@@ -21,26 +17,25 @@ const childVariants: Variants = {
   animate: { opacity: 1, y: 0 },
 };
 
-export default function Welcome({ setMusicState }: Props) {
-  const { isInvitationOpen, setIsInvitations } = useStore((store) => ({
-    isInvitationOpen: store.isInvitationOpen,
-    setIsInvitations: store.setIsInvitations,
-  }));
+export default function Welcome() {
+  const { isInvitationOpen, setIsInvitations, setMusicState } = useStore(
+    (store) => ({
+      isInvitationOpen: store.isInvitationOpen,
+      setIsInvitations: store.setIsInvitations,
+      setMusicState: store.setMusicState,
+    })
+  );
 
   const [isModalOpen, setIsModalOpen] = useState(true);
 
-  useEffect(() => {
-    const canBodyScroll = isInvitationOpen;
-    if (canBodyScroll) {
-      document.body.style.overflow = "visible";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  }, [isInvitationOpen]);
-
   const welcomeScreen = useRef<HTMLElement>(null);
   return (
-    <AnimatePresence onExitComplete={() => setIsInvitations(true)}>
+    <AnimatePresence
+      onExitComplete={() => {
+        setIsInvitations(true);
+        document.body.style.overflow = "visible";
+      }}
+    >
       {isModalOpen && (
         <motion.section
           className="fixed inset-0 z-[100] h-full w-full overflow-hidden text-white"

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { AiFillHome, AiFillCalendar, AiFillWechat } from "react-icons/ai";
 import { FaUserFriends, FaImages } from "react-icons/fa";
