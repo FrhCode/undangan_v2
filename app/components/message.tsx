@@ -21,6 +21,7 @@ export default function Message({ messages }: Props) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { isSubmitting, errors },
   } = useForm<FormData>();
 
@@ -31,6 +32,7 @@ export default function Message({ messages }: Props) {
     }).then((res) => res.json());
 
     router.refresh();
+    reset();
   };
 
   return (

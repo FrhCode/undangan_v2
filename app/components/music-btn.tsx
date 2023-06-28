@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import { AiOutlinePause, AiOutlinePlayCircle } from "react-icons/ai";
 import { AnimatePresence, motion, useTransform } from "framer-motion";
 import useStore from "@/store/useStore";
@@ -16,7 +16,24 @@ export default function MusicBtn() {
     [0, 0, 1]
   );
 
+  const audio = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined"
+      ? new Audio(
+          "/emotional-cinematic-background-piano-inspirational-orchestral-music-115915.mp3"
+        )
+      : undefined
+  );
+
+  useEffect(() => {
+    if (musicState) {
+      audio.current?.play();
+    } else {
+      audio.current?.pause();
+    }
+  }, [musicState, audio]);
+
   const x = useTransform(scrollYBoundedProgressTrottle, [0, 1], [0, 70]);
+
   return (
     <AnimatePresence>
       {isInvitationOpen && (

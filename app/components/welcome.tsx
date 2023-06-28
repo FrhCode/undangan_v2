@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 import pengantin from "@/public/pengantin.png";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import WelcomeImg from "@/public/pexels-pixabay-265856.jpg";
 import { BsEnvelopeExclamation } from "react-icons/bs";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import useStore from "@/store/useStore";
+import { useSearchParams } from "next/navigation";
 
 const variants: Variants = {
   initial: {},
@@ -18,17 +19,17 @@ const childVariants: Variants = {
 };
 
 export default function Welcome() {
-  const { isInvitationOpen, setIsInvitations, setMusicState } = useStore(
-    (store) => ({
-      isInvitationOpen: store.isInvitationOpen,
-      setIsInvitations: store.setIsInvitations,
-      setMusicState: store.setMusicState,
-    })
-  );
+  const { setIsInvitations, setMusicState } = useStore((store) => ({
+    setIsInvitations: store.setIsInvitations,
+    setMusicState: store.setMusicState,
+  }));
 
   const [isModalOpen, setIsModalOpen] = useState(true);
 
-  const welcomeScreen = useRef<HTMLElement>(null);
+  const searchParams = useSearchParams();
+
+  const to = searchParams.get("to");
+
   return (
     <AnimatePresence
       onExitComplete={() => {
@@ -40,7 +41,6 @@ export default function Welcome() {
         <motion.section
           className="fixed inset-0 z-[100] h-full w-full overflow-hidden text-white"
           id="welcome"
-          ref={welcomeScreen}
           exit={{ translateY: "100%" }}
           transition={{ duration: 0.4 }}
         >
@@ -76,7 +76,7 @@ export default function Welcome() {
               <p className="mt-4">Undangan Spesial Untuk</p>
             </motion.div>
             <motion.div variants={childVariants}>
-              <p className="font-semibold">{"Ervan"}</p>
+              <p className="font-semibold">{to ?? "-"}</p>
             </motion.div>
             <motion.div variants={childVariants}>
               <p className="mt-1 w-64 text-center text-sm font-light">

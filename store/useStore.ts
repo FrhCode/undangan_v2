@@ -10,9 +10,8 @@ interface StoreState {
 const useStore = create<StoreState>()((set) => ({
   isInvitationOpen: false,
   musicState: false,
-  setIsInvitations: (boolean) =>
-    set((state) => ({ isInvitationOpen: boolean })),
-  setMusicState: (boolean) => set((state) => ({ isInvitationOpen: boolean })),
+  setIsInvitations: (data) => set((state) => ({ isInvitationOpen: data })),
+  setMusicState: (data) => set((state) => ({ musicState: data })),
 }));
 
 export default useStore;
