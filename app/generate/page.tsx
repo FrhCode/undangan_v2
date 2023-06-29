@@ -33,7 +33,7 @@ export default function page() {
           const params = new URLSearchParams({
             to: item.name,
           });
-          const link = `${webPageUrl}?${params}`;
+          const link = `${webPageUrl}?${params.toString()}`;
           return [item.name, link];
         }),
       ];
