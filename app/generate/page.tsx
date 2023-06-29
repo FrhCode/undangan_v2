@@ -33,7 +33,9 @@ export default function page() {
           const params = new URLSearchParams({
             to: item.name,
           });
-          const link = `${webPageUrl}?${params.toString()}`;
+          const link = `${webPageUrl}?${params
+            .toString()
+            .replace(/\+/g, "%20")}`;
           return [item.name, link];
         }),
       ];
