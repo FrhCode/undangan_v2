@@ -43,7 +43,7 @@ export default function Page() {
             to: item.name,
           });
 
-          const URL = `${webPageUrl}?${params
+          const URL = `${webPageUrl}/?${params
             .toString()
             .replace(/\+/g, "%20")}`;
           const link = generateMessage({
