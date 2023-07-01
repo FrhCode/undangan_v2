@@ -44,7 +44,7 @@ export default function generateMessage({
 	🏠 ${ReceptionLocation}
 	
 	📜Link undangan :
-	 ${URL}
+	 https://${URL}
 	
 	Kehadiran, doa dan restu anda semua adalah kado terindah bagi kami. Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus dan dalam.
 		
