@@ -34,10 +34,11 @@ export default function page() {
           const params = new URLSearchParams({
             to: item.name,
           });
-          const link = `${webPageUrl}?${generateMessage(
-            params.toString().replace(/\+/g, "%20"),
+
+          const link = generateMessage(
+            `${webPageUrl}?${params.toString().replace(/\+/g, "%20")}`,
             item.name
-          )}`;
+          );
           return [item.name, link];
         }),
       ];
