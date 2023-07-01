@@ -1,6 +1,7 @@
 "use client";
 import React, { ChangeEvent } from "react";
 import * as XLSX from "xlsx";
+import generateMessage from "./utils/generate-message";
 
 type IWorkSheet = {
   name: string;
@@ -33,9 +34,9 @@ export default function page() {
           const params = new URLSearchParams({
             to: item.name,
           });
-          const link = `${webPageUrl}?${params
-            .toString()
-            .replace(/\+/g, "%20")}`;
+          const link = `${webPageUrl}?${generateMessage(
+            params.toString().replace(/\+/g, "%20")
+          )}`;
           return [item.name, link];
         }),
       ];
