@@ -48,7 +48,7 @@ export default function RingSection() {
         </motion.div>
         <motion.div className="mt-1" variants={textVariants}>
           <p className="font-dancing font-dancing-script text-5xl font-semibold">
-            Tiara & Rizky
+            Rosyida & Rizky
           </p>
         </motion.div>
         <motion.div className="mt-3" variants={textVariants}>
