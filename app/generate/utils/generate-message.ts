@@ -47,7 +47,7 @@ export default function generateMessage({
 	 ${URL}
 	
 	Kehadiran, doa dan restu anda semua adalah kado terindah bagi kami. Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus dan dalam.
-	Jangan lupa menggunakan protokol kesehatan dengan memakai masker
+		
 	Wassalamua'alaikum Warahmatullahi Wabarakatuh.
 	
 	Kami yang berbahagia,
