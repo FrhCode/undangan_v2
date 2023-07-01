@@ -12,9 +12,15 @@ export default function generateMessage(URL: string, to: string) {
 	 💍 
 	Rizky Irmawan
 	
-	Insya Allah akan dilaksanakan pada :
-	🗓️ Akad : Rabu 05 Juli 2023
-	⏰ Pukul : 09.00 - Selesai WIT
+	Insya Allah akad akan dilaksanakan pada :
+	🗓️ Rabu 05 Juli 2023
+	⏰ 09.00 - Selesai WIT
+	🏠 Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang
+	
+	Dan Resepsi dilaksanakan pada :
+	🗓️ Minggu 23-Juli-2023
+	⏰ 09.00 - Selesai WIT
+	🏠 Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang
 	
 	📜Link undangan :
 	 ${URL}

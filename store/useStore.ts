@@ -18,10 +18,12 @@ const useStore = create<StoreState>()((set) => ({
   musicState: false,
   D_Day: new Date(2023, 6, 5, 9),
   D_DayTime: "09.00 - 12.00 WIT",
-  D_DayLocation: "Pinrang Masolo-sulawesi selatan",
+  D_DayLocation:
+    "Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang",
   Reception: new Date(2023, 6, 23),
   ReceptionTime: "09.00 - 12.00 WIT",
-  ReceptionLocation: "Tarakan Kalimantan Utara",
+  ReceptionLocation:
+    "Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang",
   setIsInvitations: (data) => set((state) => ({ isInvitationOpen: data })),
   setMusicState: (data) => set((state) => ({ musicState: data })),
 }));
