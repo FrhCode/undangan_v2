@@ -20,7 +20,7 @@ export default function generateMessage(URL: string, to: string) {
 	Dan Resepsi dilaksanakan pada :
 	🗓️ Minggu 23-Juli-2023
 	⏰ 09.00 - Selesai WIT
-	🏠 Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang
+	🏠 Jl bhayangkara gang bersama 1 RT. 45 (sebelum perum darusalam (Paling depan), KOTA TARAKAN, TARAKAN BARAT, KALIMANTAN UTARA, ID, 77111
 	
 	📜Link undangan :
 	 ${URL}

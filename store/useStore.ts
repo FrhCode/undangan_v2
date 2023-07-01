@@ -23,7 +23,7 @@ const useStore = create<StoreState>()((set) => ({
   Reception: new Date(2023, 6, 23),
   ReceptionTime: "09.00 - 12.00 WIT",
   ReceptionLocation:
-    "Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang",
+    "Jl bhayangkara gang bersama 1 RT. 45 (sebelum perum darusalam (Paling depan), KOTA TARAKAN, TARAKAN BARAT, KALIMANTAN UTARA, ID, 77111",
   setIsInvitations: (data) => set((state) => ({ isInvitationOpen: data })),
   setMusicState: (data) => set((state) => ({ musicState: data })),
 }));
