@@ -35,7 +35,8 @@ export default function page() {
             to: item.name,
           });
           const link = `${webPageUrl}?${generateMessage(
-            params.toString().replace(/\+/g, "%20")
+            params.toString().replace(/\+/g, "%20"),
+            item.name
           )}`;
           return [item.name, link];
         }),

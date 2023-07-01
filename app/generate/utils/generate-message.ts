@@ -1,35 +1,31 @@
-export default function generateMessage(URL: string) {
+export default function generateMessage(URL: string, to: string) {
   const text = `Bismillahirrahmanirrahim
 	Assalamu'alaikum Warahmatullahi Wabarakatuh.
 	
-	Yth. Keluarga besar GreenFox
+	Yth. ${to}
 	
 	Maha suci Allah yang telah menjadikan segala sesuatu lebih indah dan sempurna.
 	
 	Izinkan kami mengundang Bapak/Ibu/Sahabat sekalian untuk dapat menghadiri acara pernikahan kami.
 	
-	Tiara Syida
+	Rosyida
 	 💍 
 	Rizky Irmawan
 	
 	Insya Allah akan dilaksanakan pada :
-	🗓️ Ahad, 21 Februari 2023
-	⏰ Akad : 07.00-09.00 WIB 
-	⏰ Resepsi : 09.00 - Selesai WIB
+	🗓️ Akad : Rabu 05 Juli 2023
+	⏰ Pukul : 09.00 - Selesai WIT
 	
 	📜Link undangan :
 	 ${URL}
 	
 	Kehadiran, doa dan restu anda semua adalah kado terindah bagi kami. Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus dan dalam.
-	
 	Jangan lupa menggunakan protokol kesehatan dengan memakai masker
-	
 	Wassalamua'alaikum Warahmatullahi Wabarakatuh.
-	
 	
 	Kami yang berbahagia,
 	
-	Rizky & Tiarabeserta keluarga`;
+	Rizky & Rosyida beserta keluarga`;
 
   return text.replace(/\t/g, "");
 }
