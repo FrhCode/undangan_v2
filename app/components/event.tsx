@@ -6,6 +6,7 @@ import { GiPartyHat } from "react-icons/gi";
 import { format } from "date-fns";
 import { id } from "date-fns/locale";
 import useStore from "@/store/useStore";
+import dateFormat from "@/utils/date-format";
 
 export default function Event() {
   const {
@@ -35,9 +36,7 @@ export default function Event() {
             </p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">
-              {format(D_Day, "EEEE dd-MMMM-yyyy", { locale: id })}
-            </p>
+            <p className="text-center text-sm">{dateFormat(D_Day)}</p>
           </RevealOpacity>
         </div>
 
@@ -68,9 +67,7 @@ export default function Event() {
             </p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">
-              {format(Reception, "EEEE dd-MMMM-yyyy", { locale: id })}
-            </p>
+            <p className="text-center text-sm">{dateFormat(Reception)}</p>
           </RevealOpacity>
         </div>
 
@@ -94,10 +91,8 @@ export default function Event() {
       </div>
 
       <iframe
-        title="maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.033851043082!2d117.56896611470526!3d3.341800897567316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3214753dd1bb8707%3A0x405c6c8216c906a9!2sJl.%20Bakaru%2C%20Karang%20Harapan%2C%20Kec.%20Tarakan%20Bar.%2C%20Kota%20Tarakan%2C%20Kalimantan%20Utara!5e0!3m2!1sid!2sid!4v1661099445620!5m2!1sid!2sid"
-        className="h-80 w-full shadow-2xl"
-        style={{ border: "0" }}
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d995.7619507744432!2d117.58324226954117!3d3.3383619997897855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMjAnMTguMSJOIDExN8KwMzUnMDIuMCJF!5e0!3m2!1sid!2suk!4v1688202420543!5m2!1sid!2suk"
+        style={{ border: "0", width: "100%", height: 300 }}
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

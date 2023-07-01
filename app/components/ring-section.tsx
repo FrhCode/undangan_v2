@@ -7,6 +7,7 @@ import ringImage from "@/public/pexels-karen-laårk-boshoff-7436111.jpg";
 import useStore from "@/store/useStore";
 import { format } from "date-fns";
 import { id } from "date-fns/locale";
+import dateFormat from "@/utils/date-format";
 
 const textVariants: Variants = {
   hide: { opacity: 0, y: 10 },
@@ -51,9 +52,7 @@ export default function RingSection() {
           </p>
         </motion.div>
         <motion.div className="mt-3" variants={textVariants}>
-          <p className="text-xl font-semibold">
-            {format(D_Day, "EEEE dd-MMMM-yyyy", { locale: id })}
-          </p>
+          <p className="text-xl font-semibold">{dateFormat(D_Day)}</p>
         </motion.div>
       </motion.div>
     </section>

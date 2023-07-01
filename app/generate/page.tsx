@@ -2,13 +2,21 @@
 import React, { ChangeEvent } from "react";
 import * as XLSX from "xlsx";
 import generateMessage from "./utils/generate-message";
+import useStore from "@/store/useStore";
 
 type IWorkSheet = {
   name: string;
   link: string;
 };
 
-export default function page() {
+export default function Page() {
+  const D_Day = useStore((store) => store.D_Day);
+  const D_DayTime = useStore((store) => store.D_DayTime);
+  const D_DayLocation = useStore((store) => store.D_DayLocation);
+  const Reception = useStore((store) => store.Reception);
+  const ReceptionTime = useStore((store) => store.ReceptionTime);
+  const ReceptionLocation = useStore((store) => store.ReceptionLocation);
+
   const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target!.files![0];
     const reader = new FileReader();
@@ -35,10 +43,19 @@ export default function page() {
             to: item.name,
           });
 
-          const link = generateMessage(
-            `${webPageUrl}?${params.toString().replace(/\+/g, "%20")}`,
-            item.name
-          );
+          const URL = `${webPageUrl}?${params
+            .toString()
+            .replace(/\+/g, "%20")}`;
+          const link = generateMessage({
+            D_Day,
+            D_DayLocation,
+            D_DayTime,
+            Reception,
+            ReceptionTime,
+            ReceptionLocation,
+            URL,
+            to: item.name,
+          });
           return [item.name, link];
         }),
       ];

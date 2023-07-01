@@ -1,4 +1,25 @@
-export default function generateMessage(URL: string, to: string) {
+import dateFormat from "@/utils/date-format";
+
+type Args = {
+  URL: string;
+  to: string;
+  D_Day: Date;
+  D_DayTime: string;
+  D_DayLocation: string;
+  Reception: Date;
+  ReceptionTime: string;
+  ReceptionLocation: string;
+};
+export default function generateMessage({
+  URL,
+  to,
+  D_Day,
+  D_DayTime,
+  D_DayLocation,
+  Reception,
+  ReceptionTime,
+  ReceptionLocation,
+}: Args) {
   const text = `Bismillahirrahmanirrahim
 	Assalamu'alaikum Warahmatullahi Wabarakatuh.
 	
@@ -13,14 +34,14 @@ export default function generateMessage(URL: string, to: string) {
 	Rizky Irmawan
 	
 	Insya Allah akad akan dilaksanakan pada :
-	🗓️ Rabu 05 Juli 2023
-	⏰ 09.00 - Selesai WIT
-	🏠 Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang
+	🗓️ ${dateFormat(D_Day)}
+	⏰ ${D_DayTime}
+	🏠 ${D_DayLocation}
 	
 	Dan Resepsi dilaksanakan pada :
-	🗓️ Minggu 23-Juli-2023
-	⏰ 09.00 - Selesai WIT
-	🏠 Jl bhayangkara gang bersama 1 RT. 45 (sebelum perum darusalam (Paling depan), KOTA TARAKAN, TARAKAN BARAT, KALIMANTAN UTARA, ID, 77111
+	🗓️ ${dateFormat(Reception)}
+	⏰ ${ReceptionTime}
+	🏠 ${ReceptionLocation}
 	
 	📜Link undangan :
 	 ${URL}
