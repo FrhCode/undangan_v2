@@ -10,7 +10,6 @@ COPY package* .
 RUN npm install
 
 COPY . .
-COPY ./.env.example ./.env
 
 RUN chmod 777 start.sh
 RUN chmod 777 wait-for-it.sh
