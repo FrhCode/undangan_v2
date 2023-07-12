@@ -41,16 +41,6 @@ export default async function App(a: any) {
 
       <Message messages={messages} />
 
-      {/* <section className="mb-[71px] bg-teal-700 p-8 text-center text-white">
-        <p>
-          Made with Love ❤ by
-          <a href="https://www.instagram.com/farhanfaj/" target="noopener">
-            {" "}
-            @farhanfaj
-          </a>
-        </p>
-      </section> */}
-
       <Footer />
     </>
   );

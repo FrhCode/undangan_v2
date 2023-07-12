@@ -41,7 +41,7 @@ export default function Reservation() {
 			maaf aku (${data.name}) tidak bisa datang`;
     }
 
-    let url = `https://api.whatsapp.com/send?phone=6281383178213&text=${encodeURI(
+    let url = `https://api.whatsapp.com/send?phone=62895344614461&text=${encodeURI(
       text.replace(/\t/g, "")
     )}`;
     window.open(url, "_blank");

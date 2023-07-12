@@ -6,7 +6,7 @@ async function main() {
     data: {
       name: "Mohammad Farhan",
       content:
-        "Barakallahu lakuma ✨Semoga Rizki dan pasangan menjadi keluarga yang bisa mengarungi samudra Mawaddah dan meniti tangga Rohmah, supaya bermukim dipuncak Sakinah ✨🤍",
+        "Barakallahu lakuma ✨Semoga Rizqi dan pasangan menjadi keluarga yang bisa mengarungi samudra Mawaddah dan meniti tangga Rohmah, supaya bermukim dipuncak Sakinah ✨🤍",
     },
   });
 }
