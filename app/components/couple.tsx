@@ -20,8 +20,8 @@ export default function Couple() {
           </p>
         </Reveal>
       </div>
-      <div className="mt-4 flex flex-col items-center justify-center space-y-1 rounded-lg bg-teal-700 p-8 text-white shadow-md">
-        <div className="relative">
+      <div className="mt-4 flex flex-col items-center justify-center space-y-1 rounded-lg bg-teal-700 p-8 py-4 text-white shadow-md">
+        <div className="relative w-36 h-36" >
           <Image src={pria} alt="" fill style={{ objectFit: "cover" }} />
         </div>
         <Reveal>
@@ -34,8 +34,8 @@ export default function Couple() {
           <p className="text-center">Bapak Dedi Anton Hartono & Ibu juariah</p>
         </Reveal>
       </div>
-      <div className="mt-4 flex flex-col items-center justify-center space-y-1 rounded-lg bg-teal-700 p-8 text-white shadow-md">
-        <div className="relative">
+      <div className="mt-4 flex flex-col items-center justify-center space-y-1 rounded-lg bg-teal-700 p-8 py-4 text-white shadow-md">
+        <div className="relative w-36 h-36">
           <Image src={wanita} alt="" fill style={{ objectFit: "cover" }} />
         </div>
         <Reveal>
