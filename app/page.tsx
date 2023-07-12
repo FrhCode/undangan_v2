@@ -17,6 +17,7 @@ import Message from "./components/message";
 import Reservation from "./components/reservation";
 import IMessages from "@/type/messages";
 import { prisma } from "@/prisma/client";
+import Transfer from "./components/transfer";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +39,7 @@ export default async function App(a: any) {
       <HourGlass />
       <Doa />
       <Reservation />
+      <Transfer />
 
       <Message messages={messages} />
 

@@ -69,7 +69,7 @@ export default function Welcome() {
             </motion.div>
             <motion.div variants={childVariants}>
               <p className="font-dancing-script text-4xl font-semibold">
-                Rizqi & Intan
+                Rizqi & Intansha
               </p>
             </motion.div>
             <motion.div variants={childVariants}>
