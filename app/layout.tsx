@@ -13,15 +13,15 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Undangan Pernikahan Rizki Irmawan S.Ag dan Rosyida S.Ak",
+  title: "Undangan Pernikahan Rizqi Maulana S.Kom dan Intansha Rifani",
   description:
-    "Acara Akad pukul 9 wit hari rabu tgl 5 juli 2023 di Pinrang Masolo-sulawesi selatan ( resepsi tagl 23 juli 2023 di tarakan kaltarw)",
+    "Acara Akad pukul 9 WIB hari Sabtu tgl 16 September 2023 di Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
   openGraph: {
-    title: "Undangan Pernikahan Rizki Irmawan S.Ag dan Rosyida S.Ak",
+    title: "Undangan Pernikahan Rizqi Maulana S.Kom dan Intansha Rifani",
     description:
-      "Acara Akad pukul 9 wit hari rabu tgl 5 juli 2023 di Pinrang Masolo-sulawesi selatan ( resepsi tagl 23 juli 2023 di tarakan kaltarw)",
-    images: "https://www.undangan.farhandev.cloud/next.svg",
-    url: "https://www.undangan.farhandev.cloud/",
+      "Acara Akad pukul 9 WIB hari Sabtu tgl 16 September 2023 di Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
+    images: "https://www.shaqi.wedding.farhandev.cloud/next.svg",
+    url: "https://www.shaqi.wedding.farhandev.cloud/",
     type: "website",
   },
 };
