@@ -29,9 +29,9 @@ export default function generateMessage({
 	
 	Izinkan kami mengundang Bapak/Ibu/Sahabat sekalian untuk dapat menghadiri acara pernikahan kami.
 	
-	Rosyida
+	Intansha Rifani
 	 💍 
-	Rizky Irmawan
+	Rizqi Maulana
 	
 	Insya Allah akad akan dilaksanakan pada :
 	🗓️ ${dateFormat(D_Day)}
@@ -52,7 +52,7 @@ export default function generateMessage({
 	
 	Kami yang berbahagia,
 	
-	Rizky & Rosyida beserta keluarga`;
+	Rizqi & Intan beserta keluarga`;
 
   return text.replace(/\t/g, "");
 }
