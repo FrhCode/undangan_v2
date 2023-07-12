@@ -31,7 +31,7 @@ export default function Transfer(){
         <p className="text-center text-sm">Nomor Rekening</p>
         </Reveal>
         <Reveal>
-        <p className="text-center text-lg mb-3">8923354740</p>
+        <p className="text-center text-lg mb-3">7221667187</p>
         </Reveal>
         <Reveal>
         <p className="text-center text-sm">Alamat</p>
