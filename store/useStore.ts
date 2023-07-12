@@ -16,11 +16,11 @@ interface StoreState {
 const useStore = create<StoreState>()((set) => ({
   isInvitationOpen: false,
   musicState: false,
-  D_Day: new Date(2023, 9, 16, 7),
+  D_Day: new Date(2023, 8, 16, 7),
   D_DayTime: "07.00 - 14.00 WIB",
   D_DayLocation:
     "Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
-  Reception: new Date(2023, 9, 16),
+  Reception: new Date(2023, 8, 16),
   ReceptionTime: "07.00 - 14.00 WIB",
   ReceptionLocation:
     "Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
