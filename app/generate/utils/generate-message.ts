@@ -36,12 +36,12 @@ export default function generateMessage({
 	Insya Allah akad akan dilaksanakan pada :
 	🗓️ ${dateFormat(D_Day)}
 	⏰ ${D_DayTime}
-	🏠 ${D_DayLocation}
+	🏠 ${D_DayLocation.replace("<br/>", "")}
 	
 	Dan Resepsi dilaksanakan pada :
 	🗓️ ${dateFormat(Reception)}
 	⏰ ${ReceptionTime}
-	🏠 ${ReceptionLocation}
+	🏠 ${ReceptionLocation.replace("<br/>", "")}
 	
 	📜Link undangan :
 	 https://${URL}
