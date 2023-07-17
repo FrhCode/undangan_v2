@@ -59,7 +59,7 @@ export default function Event() {
             <p className="font-medium">Lokasi</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">{D_DayLocation}</p>
+            <p className="text-center text-sm" dangerouslySetInnerHTML={{__html:D_DayLocation}} />
           </RevealOpacity>
         </div>
       </div>
@@ -90,7 +90,7 @@ export default function Event() {
             <p className="font-medium">Lokasi</p>
           </RevealOpacity>
           <RevealOpacity>
-            <p className="text-center text-sm">{ReceptionLocation}</p>
+            <p className="text-center text-sm" dangerouslySetInnerHTML={{__html:ReceptionLocation}} />
           </RevealOpacity>
         </div>
       </div>

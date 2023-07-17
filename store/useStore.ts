@@ -19,11 +19,11 @@ const useStore = create<StoreState>()((set) => ({
   D_Day: new Date(2023, 8, 16, 7, 30),
   D_DayTime: "07.30 - Selesai",
   D_DayLocation:
-    "Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
+    "(Kanaya Food) <br/> Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
   Reception: new Date(2023, 8, 16),
   ReceptionTime: "09.30 - 12.00 WIB",
   ReceptionLocation:
-    "Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
+    "(Kanaya Food) <br/> Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
   setIsInvitations: (data) => set((state) => ({ isInvitationOpen: data })),
   setMusicState: (data) => set((state) => ({ musicState: data })),
 }));
