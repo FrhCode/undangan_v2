@@ -29,30 +29,34 @@ export default function generateMessage({
 	
 	Izinkan kami mengundang Bapak/Ibu/Sahabat sekalian untuk dapat menghadiri acara pernikahan kami.
 	
-	Rosyida
+	Intansha Rifani
 	 💍 
-	Rizky Irmawan
+	Rizqi Maulana
 	
 	Insya Allah akad akan dilaksanakan pada :
 	🗓️ ${dateFormat(D_Day)}
 	⏰ ${D_DayTime}
-	🏠 ${D_DayLocation}
+	🏠 ${D_DayLocation.replace("<br/>", "")}
 	
 	Dan Resepsi dilaksanakan pada :
 	🗓️ ${dateFormat(Reception)}
 	⏰ ${ReceptionTime}
-	🏠 ${ReceptionLocation}
+	🏠 ${ReceptionLocation.replace("<br/>", "")}
 	
 	📜Link undangan :
 	 https://${URL}
 	
 	Kehadiran, doa dan restu anda semua adalah kado terindah bagi kami. Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus dan dalam.
+
+	jikalau tidak dapat menghadiri pernikahan kami, Bapak/Ibu/Saudara/i dapat melihat proses pernikahan kami di laman instagram @shaaintan
+	📷 link :
+	https://instagram.com/shaaintan?igshid=NTc4MTIwNjQ2YQ==
 		
 	Wassalamua'alaikum Warahmatullahi Wabarakatuh.
 	
 	Kami yang berbahagia,
 	
-	Rizky & Rosyida beserta keluarga`;
+	Rizqi & Intansha beserta keluarga`;
 
   return text.replace(/\t/g, "");
 }

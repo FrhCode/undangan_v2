@@ -16,14 +16,14 @@ interface StoreState {
 const useStore = create<StoreState>()((set) => ({
   isInvitationOpen: false,
   musicState: false,
-  D_Day: new Date(2023, 6, 5, 9),
-  D_DayTime: "09.00 - 12.00 WIT",
+  D_Day: new Date(2023, 8, 16, 7, 30),
+  D_DayTime: "07.30 - Selesai",
   D_DayLocation:
-    "Cv. Kinabalu jaya karoseri Jln. Poros Masolo - Teppo, Kec. Patampanua, Kab. Pinrang",
-  Reception: new Date(2023, 6, 23),
-  ReceptionTime: "09.00 - 12.00 WIT",
+    "(Kanaya Food) <br/> Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
+  Reception: new Date(2023, 8, 16),
+  ReceptionTime: "09.30 - 12.00 WIB",
   ReceptionLocation:
-    "Jl bhayangkara gang bersama 1 RT. 45 (sebelum perum darusalam (Paling depan), KOTA TARAKAN, TARAKAN BARAT, KALIMANTAN UTARA, ID, 77111",
+    "(Kanaya Food) <br/> Jl. Cikutra No.237, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124",
   setIsInvitations: (data) => set((state) => ({ isInvitationOpen: data })),
   setMusicState: (data) => set((state) => ({ musicState: data })),
 }));

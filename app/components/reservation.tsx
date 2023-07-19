@@ -28,20 +28,20 @@ export default function Reservation() {
   const onSubmit: SubmitHandler<IFormValues> = (data) => {
     let text: string;
     if (data.status == "Iya saya bisa datang") {
-      text = `Assalamualaikum Rizki. 
+      text = `Assalamualaikum Rizqi. 
 	
 			Insyaallah aku (${data.name}) akan datang ke acara pernikahan, bersama keluarga berjumlah ${data.total}`;
     } else if (data.status == "Saya Masih Ragu") {
-      text = `Assalamualaikum Rizki. 
+      text = `Assalamualaikum Rizqi. 
 	
 			aku (${data.name}) masih ragu apakah akan bisa datang atau tidak`;
     } else {
-      text = `Assalamualaikum Rizki. 
+      text = `Assalamualaikum Rizqi. 
 
 			maaf aku (${data.name}) tidak bisa datang`;
     }
 
-    let url = `https://api.whatsapp.com/send?phone=6281383178213&text=${encodeURI(
+    let url = `https://api.whatsapp.com/send?phone=62895344614461&text=${encodeURI(
       text.replace(/\t/g, "")
     )}`;
     window.open(url, "_blank");

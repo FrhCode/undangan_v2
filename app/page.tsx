@@ -17,6 +17,7 @@ import Message from "./components/message";
 import Reservation from "./components/reservation";
 import IMessages from "@/type/messages";
 import { prisma } from "@/prisma/client";
+import Transfer from "./components/transfer";
 
 export const dynamic = "force-dynamic";
 
@@ -38,18 +39,9 @@ export default async function App(a: any) {
       <HourGlass />
       <Doa />
       <Reservation />
+      <Transfer />
 
       <Message messages={messages} />
-
-      {/* <section className="mb-[71px] bg-teal-700 p-8 text-center text-white">
-        <p>
-          Made with Love ❤ by
-          <a href="https://www.instagram.com/farhanfaj/" target="noopener">
-            {" "}
-            @farhanfaj
-          </a>
-        </p>
-      </section> */}
 
       <Footer />
     </>

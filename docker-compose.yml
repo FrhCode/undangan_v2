@@ -18,13 +18,10 @@ services:
     env_file:
       - .env
     ports:
-      - 3000:3000
+      - 3009:3000
     # volumes:
     # - ./:/app
     # - /app/node_modules
     # - /app/vendor
     entrypoint: ./start.sh
     # command: tail -F /dev/null
-
-
-
