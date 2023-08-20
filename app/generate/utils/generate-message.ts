@@ -29,9 +29,9 @@ export default function generateMessage({
 	
 	Izinkan kami mengundang Bapak/Ibu/Sahabat sekalian untuk dapat menghadiri acara pernikahan kami.
 	
-	Intansha Rifani
-	 💍 
 	Rizqi Maulana
+	 💍 
+	Intansha Rifani
 	
 	Insya Allah akad akan dilaksanakan pada :
 	🗓️ ${dateFormat(D_Day)}

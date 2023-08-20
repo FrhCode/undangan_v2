@@ -25,7 +25,7 @@ export default function Couple() {
           <Image src={pria} alt="" fill style={{ objectFit: "cover" }} />
         </div>
         <Reveal>
-          <p className="text-center text-sm">Rizqi Maulana S.KOM</p>
+          <p className="text-center text-sm">Rizqi Maulana, S.KOM</p>
         </Reveal>
         <Reveal>
           <p className="text-center text-sm font-bold">Putra dari</p>
@@ -46,7 +46,7 @@ export default function Couple() {
         </Reveal>
         <Reveal>
           <p className="text-center">
-            Bapak Hendra Dwitya Talman & Ibu Arfiani
+            Bapak Hendra Dwitya Talman, S.E & Ibu Arfiani
           </p>
         </Reveal>
       </div>
