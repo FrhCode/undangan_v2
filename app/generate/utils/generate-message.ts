@@ -48,7 +48,7 @@ export default function generateMessage({
 	
 	Kehadiran, doa dan restu anda semua adalah kado terindah bagi kami. Tiada yang dapat kami ungkapkan selain rasa terima kasih dari hati yang tulus dan dalam.
 
-	jikalau tidak dapat menghadiri pernikahan kami, Bapak/Ibu/Saudara/i dapat melihat proses pernikahan kami di laman instagram @shaaintan
+	jikalau tidak dapat menghadiri pernikahan kami, Bapak/Ibu/Saudara/i dapat melihat proses pernikahan kami di LIVE instagram @shaaintan
 	📷 link :
 	https://instagram.com/shaaintan?igshid=NTc4MTIwNjQ2YQ==
 		
